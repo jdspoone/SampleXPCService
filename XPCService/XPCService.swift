@@ -11,6 +11,8 @@ class XPCService : NSObject, NSXPCListenerDelegate, XPCServiceProtocol
   {
 
     var count : Int = 0
+
+    // The XPC Service must maintain an XPC listener to manage incoming XPC connections
     let listener : NSXPCListener
 
 
@@ -29,15 +31,11 @@ class XPCService : NSObject, NSXPCListenerDelegate, XPCServiceProtocol
 
 
     func start()
-      {
-        listener.resume()
-      }
+      { listener.resume() }
 
 
     func stop()
-      {
-        listener.suspend()
-      }
+      { listener.suspend() }
 
 
     // MARK: NSXPCListenerDelegate
@@ -71,6 +69,5 @@ class XPCService : NSObject, NSXPCListenerDelegate, XPCServiceProtocol
         // Call the completion block with the current count
         block(count)
       }
-
 
   }

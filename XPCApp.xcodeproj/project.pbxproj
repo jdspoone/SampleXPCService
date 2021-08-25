@@ -47,6 +47,8 @@
 		1F2CE0B526D5A971003CEEB9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1F2CE0B726D5A9C2003CEEB9 /* XPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCService.swift; sourceTree = "<group>"; };
 		1F2CE0B926D5ABDC003CEEB9 /* XPCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCServiceProtocol.swift; sourceTree = "<group>"; };
+		1F2CE0BC26D5DC78003CEEB9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1F2CE0BE26D5DD59003CEEB9 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1FA0295A26D4375A00661235 /* XPCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA0295D26D4375A00661235 /* XPCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCApp.swift; sourceTree = "<group>"; };
 		1FA0295F26D4375A00661235 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,9 +79,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F2CE0BD26D5DC86003CEEB9 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				1F2CE0BC26D5DC78003CEEB9 /* README.md */,
+				1F2CE0BE26D5DD59003CEEB9 /* LICENSE */,
+			);
+			path = Documentation;
+			sourceTree = "<group>";
+		};
 		1FA0295126D4375A00661235 = {
 			isa = PBXGroup;
 			children = (
+				1F2CE0BD26D5DC86003CEEB9 /* Documentation */,
 				1FA0295C26D4375A00661235 /* XPCApp */,
 				1FA0297226D4376E00661235 /* XPCService */,
 				1FA0295B26D4375A00661235 /* Products */,

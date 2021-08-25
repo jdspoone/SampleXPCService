@@ -11,6 +11,7 @@
 		1F2CE0B826D5A9C2003CEEB9 /* XPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CE0B726D5A9C2003CEEB9 /* XPCService.swift */; };
 		1F2CE0BA26D5ABDD003CEEB9 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CE0B926D5ABDC003CEEB9 /* XPCServiceProtocol.swift */; };
 		1F2CE0BB26D5D4A9003CEEB9 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CE0B926D5ABDC003CEEB9 /* XPCServiceProtocol.swift */; };
+		1F5BEC2F26D6FE6100DB7C28 /* TODO.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1F5BEC2E26D6FE6100DB7C28 /* TODO.txt */; };
 		1FA0295E26D4375A00661235 /* XPCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0295D26D4375A00661235 /* XPCApp.swift */; };
 		1FA0296026D4375A00661235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0295F26D4375A00661235 /* ContentView.swift */; };
 		1FA0296226D4375B00661235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA0296126D4375B00661235 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		1F2CE0B526D5A971003CEEB9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1F2CE0B726D5A9C2003CEEB9 /* XPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCService.swift; sourceTree = "<group>"; };
 		1F2CE0B926D5ABDC003CEEB9 /* XPCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCServiceProtocol.swift; sourceTree = "<group>"; };
+		1F5BEC2E26D6FE6100DB7C28 /* TODO.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO.txt; sourceTree = "<group>"; };
 		1FA0295A26D4375A00661235 /* XPCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA0295D26D4375A00661235 /* XPCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCApp.swift; sourceTree = "<group>"; };
 		1FA0295F26D4375A00661235 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		1FBB935B26D5EB6300454C4A /* Documentation */ = {
 			isa = PBXGroup;
 			children = (
+				1F5BEC2E26D6FE6100DB7C28 /* TODO.txt */,
 				1FBB935826D5EB5A00454C4A /* README.md */,
 				1FBB935726D5EB5A00454C4A /* LICENSE */,
 			);
@@ -223,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F5BEC2F26D6FE6100DB7C28 /* TODO.txt in Resources */,
 				1FBB935926D5EB5A00454C4A /* LICENSE in Resources */,
 				1FA0296526D4375B00661235 /* Preview Assets.xcassets in Resources */,
 				1FBB935A26D5EB5A00454C4A /* README.md in Resources */,

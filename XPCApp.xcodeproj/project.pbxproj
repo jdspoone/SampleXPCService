@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F2CE0B626D5A971003CEEB9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CE0B526D5A971003CEEB9 /* main.swift */; };
+		1F2CE0B826D5A9C2003CEEB9 /* XPCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CE0B726D5A9C2003CEEB9 /* XPCService.swift */; };
+		1F2CE0BA26D5ABDD003CEEB9 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CE0B926D5ABDC003CEEB9 /* XPCServiceProtocol.swift */; };
+		1F2CE0BB26D5D4A9003CEEB9 /* XPCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CE0B926D5ABDC003CEEB9 /* XPCServiceProtocol.swift */; };
 		1FA0295E26D4375A00661235 /* XPCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0295D26D4375A00661235 /* XPCApp.swift */; };
 		1FA0296026D4375A00661235 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0295F26D4375A00661235 /* ContentView.swift */; };
 		1FA0296226D4375B00661235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA0296126D4375B00661235 /* Assets.xcassets */; };
 		1FA0296526D4375B00661235 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA0296426D4375B00661235 /* Preview Assets.xcassets */; };
-		1FA0297626D4376E00661235 /* XPCService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0297526D4376E00661235 /* XPCService.m */; };
-		1FA0297826D4376E00661235 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0297726D4376E00661235 /* main.m */; };
 		1FA0297C26D4376E00661235 /* XPCService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = 1FA0297126D4376E00661235 /* XPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1FA0298226D4381000661235 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0298126D4381000661235 /* ConnectionManager.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1F2CE0B526D5A971003CEEB9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1F2CE0B726D5A9C2003CEEB9 /* XPCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCService.swift; sourceTree = "<group>"; };
+		1F2CE0B926D5ABDC003CEEB9 /* XPCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCServiceProtocol.swift; sourceTree = "<group>"; };
 		1FA0295A26D4375A00661235 /* XPCApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA0295D26D4375A00661235 /* XPCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCApp.swift; sourceTree = "<group>"; };
 		1FA0295F26D4375A00661235 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,13 +55,8 @@
 		1FA0296626D4375B00661235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA0296726D4375B00661235 /* XPCApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCApp.entitlements; sourceTree = "<group>"; };
 		1FA0297126D4376E00661235 /* XPCService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = XPCService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FA0297426D4376E00661235 /* XPCService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCService.h; sourceTree = "<group>"; };
-		1FA0297526D4376E00661235 /* XPCService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPCService.m; sourceTree = "<group>"; };
-		1FA0297726D4376E00661235 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1FA0297926D4376E00661235 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA0298126D4381000661235 /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
-		1FA0298326D43A3400661235 /* XPCServiceBridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCServiceBridgingHeader.h; sourceTree = "<group>"; };
-		1FA0298726D43C8F00661235 /* XPCServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCServiceProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,11 +120,9 @@
 		1FA0297226D4376E00661235 /* XPCService */ = {
 			isa = PBXGroup;
 			children = (
-				1FA0297426D4376E00661235 /* XPCService.h */,
-				1FA0297526D4376E00661235 /* XPCService.m */,
-				1FA0298326D43A3400661235 /* XPCServiceBridgingHeader.h */,
-				1FA0298726D43C8F00661235 /* XPCServiceProtocol.h */,
-				1FA0297726D4376E00661235 /* main.m */,
+				1F2CE0B526D5A971003CEEB9 /* main.swift */,
+				1F2CE0B726D5A9C2003CEEB9 /* XPCService.swift */,
+				1F2CE0B926D5ABDC003CEEB9 /* XPCServiceProtocol.swift */,
 				1FA0297926D4376E00661235 /* Info.plist */,
 			);
 			path = XPCService;
@@ -231,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FA0296026D4375A00661235 /* ContentView.swift in Sources */,
+				1F2CE0BB26D5D4A9003CEEB9 /* XPCServiceProtocol.swift in Sources */,
 				1FA0298226D4381000661235 /* ConnectionManager.swift in Sources */,
 				1FA0295E26D4375A00661235 /* XPCApp.swift in Sources */,
 			);
@@ -240,8 +239,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FA0297826D4376E00661235 /* main.m in Sources */,
-				1FA0297626D4376E00661235 /* XPCService.m in Sources */,
+				1F2CE0BA26D5ABDD003CEEB9 /* XPCServiceProtocol.swift in Sources */,
+				1F2CE0B626D5A971003CEEB9 /* main.swift in Sources */,
+				1F2CE0B826D5A9C2003CEEB9 /* XPCService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +374,7 @@
 		1FA0296B26D4375B00661235 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XPCApp/XPCApp.entitlements;
@@ -392,7 +393,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.XPCApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = XPCService/XPCServiceBridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -400,6 +401,7 @@
 		1FA0296C26D4375B00661235 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = XPCApp/XPCApp.entitlements;
@@ -418,7 +420,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.XPCApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = XPCService/XPCServiceBridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -441,7 +443,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.XPCService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "XPCApp/XPCService-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -465,7 +467,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.XPCService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "XPCApp/XPCService-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

@@ -1,7 +1,4 @@
-1. Implement bidirectional XPC communication
-  -the logic contained in ConnectionManager is probably going to need to be refactored somehow...
-
-2. Implement XPC connection interruption/invalidation error handling
+-Implement XPC connection interruption/invalidation error handling
   -add ability to interrupt/invalidate XPC connection on demand to demonstrate this
 
-3. Implement running multiple XPC services simultaneously from the same main application
+-Implement running multiple XPC services simultaneously from the same main application

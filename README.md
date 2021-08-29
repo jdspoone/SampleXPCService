@@ -8,7 +8,8 @@ The project includes:
 
 To use this application:
 * Build and Run the XPCApp target
-* Use the *Get Count* and *Increment Count* buttons 
+* Use the *Start Timer* button to launch a timer on the XPC service which will trigger the client's *count* variable to be incremented on firing
+* Use the *Cancel Timer* button to cancel the XPC service's timer 
 
 The XPC Service is launched automatically alongside the main application, and terminates when the main application terminates.
 

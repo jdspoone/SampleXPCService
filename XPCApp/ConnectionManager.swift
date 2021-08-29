@@ -7,10 +7,13 @@
 import Foundation
 
 
-class ConnectionManager: NSObject, ObservableObject
+class ConnectionManager: NSObject, ObservableObject, ClientProtocol
   {
 
     private var _connection: NSXPCConnection!
+
+    // Since the count is being displayed in the ContentView, it must be a Published variable
+    @Published var count : Int = 0
 
 
     override init()
@@ -25,6 +28,11 @@ class ConnectionManager: NSObject, ObservableObject
         _connection.resume()
 
         super.init()
+
+        // In order to achieve bidirectional communication between the client app and the XPC service, we must
+        //  additionally set the exported object and exported interface of the connection we have just created.
+        _connection.exportedObject = self
+        _connection.exportedInterface = NSXPCInterface(with: ClientProtocol.self)
 
         // Configure the XPC connection's interruption handler
         _connection.interruptionHandler = {
@@ -45,5 +53,15 @@ class ConnectionManager: NSObject, ObservableObject
 
     public func connection() -> NSXPCConnection
       { return _connection }
+
+
+    // MARK: ClientProtocol
+
+    func incrementCount()
+      {
+        // Because this method is updating a Published variable, but will be called on a background thread,
+        // We need to ensure that the logic to modify the count is run on the main thread
+        DispatchQueue.main.async { self.count += 1 }
+      }
 
   }

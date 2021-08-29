@@ -14,8 +14,9 @@ struct ContentView: View {
 
 
   var body: some View {
-    Button("Get Count", action: getCount)
-    Button("Increment Count", action: incrementCount)
+    Text(String(connectionManager.count)).padding()
+    Button("Start Timer", action: startTimer).padding()
+    Button("Cancel Timer", action: cancelTimer).padding()
   }
 
 
@@ -27,19 +28,17 @@ struct ContentView: View {
     }
 
 
-  func getCount() -> Void
+  func startTimer() -> Void
     {
-      // Send a completion callback to the XPC service
-      xpcService.getCount { count in
-        print("xpcService count is \(count)")
-      }
+      // Message the XPC Service to begin the timer
+      xpcService.startTimer()
     }
 
 
-  func incrementCount() -> Void
+  func cancelTimer() -> Void
     {
-      // Message the XPC service to increment it's counter
-      xpcService.incrementCount()
+      // Message the XPC service to cancel the timer
+      xpcService.cancelTimer()
     }
 
 }

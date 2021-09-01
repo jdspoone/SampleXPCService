@@ -99,14 +99,14 @@ class XPCService : NSObject, NSXPCListenerDelegate, XPCServiceProtocol
       }
 
 
-  func cancelTimer()
-    {
-      // Ensure the timer source is non-nil
-      guard timerSource != nil else { return }
+    func cancelTimer()
+      {
+        // Ensure the timer source is non-nil
+        guard timerSource != nil else { return }
 
-      // Cancel and deallocate the timer source
-      timerSource!.cancel()
-      timerSource = nil
-    }
+        // Cancel and deallocate the timer source
+        timerSource!.cancel()
+        timerSource = nil
+      }
 
   }

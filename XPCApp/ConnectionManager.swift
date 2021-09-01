@@ -16,18 +16,13 @@ class ConnectionManager: NSObject, ObservableObject, ClientProtocol
     @Published var count : Int = 0
 
 
-    override init()
+    private func establishConnection() -> Void
       {
         // Create an XPC connection to the XPC service
         _connection = NSXPCConnection(serviceName: xpcServiceLabel)
 
         // Set the XPC interface of the connection's remote object using the XPC service's published protocol
         _connection.remoteObjectInterface = NSXPCInterface(with: XPCServiceProtocol.self)
-
-        // New connections must be resumed before use
-        _connection.resume()
-
-        super.init()
 
         // In order to achieve bidirectional communication between the client app and the XPC service, we must
         //  additionally set the exported object and exported interface of the connection we have just created.
@@ -39,20 +34,42 @@ class ConnectionManager: NSObject, ObservableObject, ClientProtocol
 
           // If the interruption handler has been called, the XPC connection remains valid, and the
           // the XPC service will automatically be re-launched with future calls to the connection object
-          print("connection to XPC service has been interrupted")
+          NSLog("connection to XPC service has been interrupted")
         }
 
         // Configure the XPC connection's invalidation handler
         _connection.invalidationHandler = {
 
           // If the invalidation handler has been called, the XPC connection is no longer valid and must be recreated
-          print("connection to XPC service has been invalidated")
+          NSLog("connection to XPC service has been invalidated")
+          self._connection = nil
         }
+
+        // New connections must be resumed before use
+        _connection.resume()
+
+        NSLog("successfully connected to XPC service")
       }
 
 
-    public func connection() -> NSXPCConnection
-      { return _connection }
+    public func xpcService() -> XPCServiceProtocol
+      {
+        // If this is the first call to the XPC service, or if the connection was just invalidated, we'll need to create a new connection
+        if _connection == nil {
+          NSLog("no connection to XPC service")
+          establishConnection()
+        }
+
+        // Return the connection's remote object proxy
+        return _connection.remoteObjectProxyWithErrorHandler { err in
+          print(err)
+        } as! XPCServiceProtocol
+      }
+
+
+    // This function exists solely to demonstrate connection invalidation error handling
+    func invalidateConnection() -> Void
+      { _connection.invalidate() }
 
 
     // MARK: ClientProtocol

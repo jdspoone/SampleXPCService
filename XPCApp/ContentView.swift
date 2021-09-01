@@ -17,28 +17,28 @@ struct ContentView: View {
     Text(String(connectionManager.count)).padding()
     Button("Start Timer", action: startTimer).padding()
     Button("Cancel Timer", action: cancelTimer).padding()
+    Button("Invalidate Connection", action: invalidateConnection).padding()
   }
-
-
-  var xpcService : XPCServiceProtocol
-    {
-      return connectionManager.connection().remoteObjectProxyWithErrorHandler { err in
-        print(err)
-      } as! XPCServiceProtocol
-    }
 
 
   func startTimer() -> Void
     {
       // Message the XPC Service to begin the timer
-      xpcService.startTimer()
+      connectionManager.xpcService().startTimer()
     }
 
 
   func cancelTimer() -> Void
     {
       // Message the XPC service to cancel the timer
-      xpcService.cancelTimer()
+      connectionManager.xpcService().cancelTimer()
+    }
+
+
+  func invalidateConnection() -> Void
+    {
+      // Invalidate the connection manager's connection to demonstrate connection invalidation error handling
+      connectionManager.invalidateConnection()
     }
 
 }

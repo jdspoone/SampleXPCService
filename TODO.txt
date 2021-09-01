@@ -1,4 +1,1 @@
--Implement XPC connection interruption/invalidation error handling
-  -add ability to interrupt/invalidate XPC connection on demand to demonstrate this
-
 -Implement running multiple XPC services simultaneously from the same main application

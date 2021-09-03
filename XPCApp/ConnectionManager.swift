@@ -72,7 +72,13 @@ class ConnectionManager: NSObject, ObservableObject, ClientProtocol
 
     // This function exists solely to demonstrate connection invalidation error handling
     func invalidateConnection() -> Void
-      { _connection.invalidate() }
+      {
+        // Ensure we have a connection to invalidate
+        guard _connection != nil else { NSLog("no connection to invalidate"); return }
+
+        // Invalidate the connection
+        _connection.invalidate()
+      }
 
 
     // MARK: ClientProtocol

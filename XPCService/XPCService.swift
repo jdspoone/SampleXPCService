@@ -10,8 +10,8 @@ import Foundation
 class XPCService : NSObject, NSXPCListenerDelegate, XPCServiceProtocol
   {
 
+    // An optional timer source whose event handler will use the XPC connection to communicate with the client application
     var timerSource : DispatchSourceTimer?
-
 
     // The XPC Service must maintain an XPC listener to manage incoming XPC connections
     let listener : NSXPCListener
@@ -33,10 +33,12 @@ class XPCService : NSObject, NSXPCListenerDelegate, XPCServiceProtocol
       }
 
 
+    // Convenience function to resume the listener, and thus start processing incoming connections
     func start()
       { listener.resume() }
 
 
+    // Convenience function to suspend the listener, and thus stop processing inconcoming connections
     func stop()
       { listener.suspend() }
 

@@ -15,6 +15,7 @@ struct XPCApp: App
 
     var body: some Scene {
       WindowGroup {
+        // Pass the connection manager to the content view as an environment object
         ContentView().environmentObject(connectionManager)
       }
     }

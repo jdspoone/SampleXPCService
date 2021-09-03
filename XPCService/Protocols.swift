@@ -6,6 +6,9 @@
     methods on the XPC service through its XPC connection, the XPC service can also call
     methods on the on the main application through its XPC connection.
 
+    Only those methods declared in the appropriate protocol, which is subsequently used to
+    create the XPC interface, can be called through the XPC connection.
+
 */
 
 import Foundation

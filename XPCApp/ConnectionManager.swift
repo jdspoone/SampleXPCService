@@ -2,6 +2,9 @@
 
   Created by Jeff Spooner
 
+  The Connection Manager handles all aspects of the application's connection to the XPC service.
+  It also maintains a count variable, which is modified through XPC communication and then displayed in the content view.
+
 */
 
 import Foundation

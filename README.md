@@ -10,6 +10,7 @@ To use this application:
 * Build and Run the XPCApp target
 * Use the *Start Timer* button to launch a timer on the XPC service which will trigger the client's *count* variable to be incremented on firing
 * Use the *Cancel Timer* button to cancel the XPC service's timer 
+* Use the *Invalidate Connection* button to invalidate the main application's XPC connection, to demonstrate the on demand re-creation of the XPC connection
 
 The XPC Service is launched automatically alongside the main application, and terminates when the main application terminates.
 

@@ -82,22 +82,19 @@ class XPCService : NSObject, NSXPCListenerDelegate, XPCServiceProtocol
         // Ensure that the timer source hasn't been created yet
         guard timerSource == nil else { return }
 
-        // Create the timer source
-        let source = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
+        // Create and retain the timer source
+        timerSource = DispatchSource.makeTimerSource(flags: [], queue: DispatchQueue.main)
 
         // Schedule the timer source to fire every 2 seconds
-        source.schedule(deadline: DispatchTime.now(), repeating: .seconds(2))
+        timerSource!.schedule(deadline: DispatchTime.now(), repeating: .seconds(2))
 
         // Set the event handler of the timer source to message to client app to increment it's count
-        source.setEventHandler(handler: DispatchWorkItem(block: {
+        timerSource!.setEventHandler(handler: DispatchWorkItem(block: {
           self.clientApp.incrementCount()
         }))
 
         // Dispatch sources are created in a suspended state, and must be resumed before they begin processing events
-        source.resume()
-
-        // Retain the timer source
-        timerSource = source
+        timerSource!.resume()
       }
 
 
